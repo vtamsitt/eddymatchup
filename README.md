@@ -13,7 +13,7 @@ Typical usage looks like:
         
  	ds = xr.open_dataset('your_favourite_oceanographic_data.nc')
        
-	matches = ed.match(ds.lon,ds.lat,ds.datetime,database='Chelton',latmin=-90,latmax=-35,hourrange=12,radiusrange=2)
+	matches = ed.match(ds.lon,ds.lat,ds.datetime,database='META3.2_allsat',latmin=-90,latmax=-35,hourrange=24,radiusrange=1)
 
 
 To Do: 
