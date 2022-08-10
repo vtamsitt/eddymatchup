@@ -1,13 +1,13 @@
 # eddymatchup
 
-This package colocates any oceanographic data (Latitude, Longitude, and Time) to eddy trajectories identified in the Mesoscale Eddy Trajectories Atlas META2.0 DT product (Schlax and Chelton 2016). 
-Data url: https://www.aviso.altimetry.fr/en/data/products/value-added-products/global-mesoscale-eddy-trajectory-product/meta2-0-dt.html
+This package colocates any oceanographic position data (Latitude, Longitude, and Time) to eddy trajectories identified in eddy databases available from AVISO. Data url: https://www.aviso.altimetry.fr/en/data/products/value-added-products/global-mesoscale-eddy-trajectory-product.html
 
 Future versions of this package will add additional publicly available eddy tracking databases to the eddy matchups, including near-real time products.
 
 We thank Jennifer Bonin and Don Chambers at the University of South Florida for providing their original fortran eddy match up code on which this package is based.
 
 Typical usage looks like:
+	
 	import xarray as xr
 	import eddymatchup as ed
         
