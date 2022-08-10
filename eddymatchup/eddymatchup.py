@@ -1,12 +1,32 @@
+# -*- coding: utf-8 -*-
 # ### function to match up oceanographic data with Chelton eddy database
-# Author: Veronica Tamsitt, August 2021
+# Author: Veronica Tamsitt, August 2022
 #
+# Downloads eddy trajectory atlas (AVISO+ login credentials required, and matches input position (latitude, longitude, time) data from User to eddy database data for cyclonic and anticyclonic eddies. The eddy database used can be specified, details of eddy databases below.
+#
+# #### META3.2_allsat (default)
+# <strong>URL</strong>: https://www.aviso.altimetry.fr/en/data/products/value-added-products/global-mesoscale-eddy-trajectory-product/meta3-2-dt.html
+#
+# <strong>Reference</strong>: Pegliasco, C., Delepoulle, A., Mason, E., Morrow, R., Faugère, Y., Dibarboure, G., 2022. META3.1exp: a new global mesoscale eddy trajectory atlas derived from altimetry. Earth Syst. Sci. Data 14, 1087–1107. https://doi.org/10.5194/essd-14-1087-2022 
+#
+# <strong>Citation</strong>: The altimetric Mesoscale Eddy Trajectories Atlas (META3.2 DT) was produced by SSALTO/DUACS and distributed by AVISO+ (https://aviso.altimetry.fr ) with support from CNES, in collaboration with IMEDEA (DOI: 10.24400/527896/a01-2022.005.210802 for the META3.2 DT allsat version  and 10.24400/527896/a01-2022.006.210802  for the META3.2 DT twosat version).
+#
+# #### META2.0 
+#
+# <strong>URL</strong>: https://www.aviso.altimetry.fr/en/data/products/value-added-products/global-mesoscale-eddy-trajectory-product/meta2-0-dt.html
+#
+# <strong>Reference</strong>:
+# Michael G. Schlax and Dudley B. Chelton, 2016: The “Growing Method" of Eddy Identification and Tracking in Two and Three Dimensions, College of Earth, Ocean and Atmospheric Sciences, Oregon State University, Corvallis, Oregon, July 8, 2016
+#
+# <strong>Citation</strong>:
 # The altimetric Mesoscale Eddy Trajectories Atlas (META2.0) was produced by SSALTO/DUACS and distributed by AVISO+ (https://aviso.altimetry.fr ) with support from CNES, in collaboration with Oregon State University with support from NASA.
 #
+# ___
+#
 # To do:
-# * make sure eddy database download works
-# * add other aviso eddy trajectory products
 # * Add error message for times outside of eddy database
+# * error messages for incorrect format for data input
+# * add other databases?
 
 #import dependent modules
 import numpy as np
